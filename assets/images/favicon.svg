@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="favCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="favDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <!-- White Background Tile -->
+  <rect width="64" height="64" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+
+  <g transform="translate(8, 8)">
+    <path d="M 0 2 L 26 2 L 18 16 L 0 16 Z" fill="url(#favBlue)" />
+    <path d="M 29 2 L 48 2 L 48 16 L 21 16 Z" fill="url(#favCyan)" />
+    <path d="M 17 20 L 33 20 L 33 46 L 17 46 Z" fill="url(#favDark)" />
+    <polygon points="11,20 15,20 15,40 11,34" fill="url(#favCyan)" />
+  </g>
+</svg>
