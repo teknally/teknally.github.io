@@ -1,12 +1,19 @@
 title: Prasenjit Das | Systems & Research
-description: High-performance systems engineering, low-latency networking, and doctoral research lab.
+description: High-performance systems engineering, low-latency infrastructure refactoring, and edge networking research.
 baseurl: ""
 url: "https://teknally.github.io"
 theme: minima
 
+# Whitelisted GitHub Pages Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Pagination Settings
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 header_pages:
   - index.md

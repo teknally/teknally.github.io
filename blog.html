@@ -1,0 +1,42 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<div style="margin-bottom: 2rem;">
+  <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">Technical Writings & Research Notes</h1>
+  <p style="color: #666; font-size: 1.05rem;">Deep dives on asynchronous Rust, low-latency networking, eBPF profiling, and doctoral research logs.</p>
+</div>
+
+<hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 2rem;" />
+
+<!-- Blog Post Listing -->
+<div class="post-list">
+  {% for post in paginator.posts %}
+    <article style="margin-bottom: 2.5rem;">
+      <span style="font-size: 0.85rem; color: #888; display: block; margin-bottom: 4px;">
+        {{ post.date | date: "%B %d, %Y" }} &bull; {{ post.categories | join: ", " }}
+      </span>
+      <h2 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 8px;">
+        <a href="{{ post.url }}" style="text-decoration: none; color: #111;">{{ post.title }}</a>
+      </h2>
+      <p style="color: #555; line-height: 1.6; margin-bottom: 8px;">
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
+      </p>
+      <a href="{{ post.url }}" style="font-size: 0.9rem; font-weight: 600; text-decoration: none; color: #0066cc;">Read Article &rarr;</a>
+    </article>
+  {% endfor %}
+</div>
+
+<!-- Pagination Controls -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination" style="display: flex; gap: 15px; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #eee;">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" style="text-decoration: none; font-weight: 600;">&larr; Newer Posts</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" style="text-decoration: none; font-weight: 600;">Older Posts &rarr;</a>
+  {% endif %}
+</div>
+{% endif %}
