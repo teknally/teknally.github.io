@@ -1,19 +1,59 @@
-<header class="site-header" role="banner" style="border-bottom: 1px solid #e8e8e8; background: #fff;">
-  <div class="wrapper" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;">
-    
-    <!-- Left: Company Logo -->
-    <a class="site-title" rel="author" href="/" style="display: flex; align-items: center; text-decoration: none;">
-      <img src="/assets/images/tcg-logo-small.png" alt="Teknally Consulting Group" style="height: 38px; width: auto;" />
+<style>
+  .site-header-nav {
+    border-bottom: 1px solid #e8e8e8;
+    background: #ffffff;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  .nav-links a:hover, .nav-links a.active {
+    color: #000;
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 640px) {
+    .header-container {
+      flex-direction: column;
+      gap: 14px;
+      text-align: center;
+      padding: 16px 0;
+    }
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 16px;
+    }
+  }
+</style>
+
+<header class="site-header-nav" role="banner">
+  <div class="wrapper header-container">
+    <!-- Logo -->
+    <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+      <img src="/assets/images/logo.png" alt="Teknally Consulting Group" style="height: 36px; width: auto;" />
     </a>
 
-    <!-- Right: 5-Page Corporate Navigation -->
-    <nav class="site-nav" style="display: flex; gap: 24px; align-items: center;">
-      <a class="page-link" href="/" style="font-weight: 600; text-decoration: none; color: #111;">Home</a>
-      <a class="page-link" href="/research" style="text-decoration: none; color: #444;">Research</a>
-      <a class="page-link" href="/projects" style="text-decoration: none; color: #444;">Projects</a>
-      <a class="page-link" href="/consulting" style="text-decoration: none; color: #444;">Consulting</a>
-      <a class="page-link" href="/about" style="text-decoration: none; color: #444;">About</a>
+    <!-- Navigation -->
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/research">Research</a>
+      <a href="/projects">Projects</a>
+      <a href="/consulting">Consulting</a>
+      <a href="/about">About</a>
     </nav>
-
   </div>
 </header>
