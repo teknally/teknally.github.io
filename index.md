@@ -1,39 +1,38 @@
 ---
-layout: home
-title: Prasenjit Das
-subtitle: Systems Engineer | PhD Candidate | Principal at Teknally Consulting Group
+layout: default
+title: Home
 ---
 
-### High-Performance Systems & Research Lab
-
-I build deterministic, low-latency infrastructure in asynchronous **Rust** and conduct doctoral research on zero-overhead edge-to-cloud networking protocols. 
-
-Through **Teknally Consulting Group**, I assist engineering teams with low-level systems refactoring, $p99.9$ tail-latency optimization, and fractional infrastructure leadership.
-
----
-
-### Active Focus Areas
-
-* **ZeroGate (Primary Portfolio Artifact):** High-throughput, zero-copy protocol translation gateway (`CoAP/CBOR` to `gRPC/Protobuf`) engineered with Tokio and Tonic.
-* **Doctoral Research:** Eliminating dynamic heap allocations and CPU overhead during edge-to-cloud payload transcoding under strict memory constraints ($<16\text{MB}$).
-* **B2B Technical Advisory:** Low-latency network design, custom protocol runtimes, and specialized Rust infrastructure consulting.
+<div style="margin-top: 2rem; margin-bottom: 2.5rem; text-align: left;">
+  <img src="/assets/images/tcg-logo-small.png" alt="Teknally Consulting Group Logo" style="max-height: 60px; width: auto; display: block; margin-bottom: 1.5rem;" />
+  <h1 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Prasenjit Das</h1>
+  <p style="font-size: 1.15rem; color: #555; line-height: 1.5; margin-bottom: 0;">
+    Systems Engineer &bull; PhD Candidate &bull; Principal at <strong>Teknally Consulting Group</strong>
+  </p>
+</div>
 
 ---
 
-### Core Target Metrics (ZeroGate Engine)
+### Core Focus
 
-| Constraint / Metric | Target Value | Implementation Strategy |
-| :--- | :--- | :--- |
-| **Hot-Path Allocations** | **0 Heap Allocations** | Unsafe-free `BytesMut` buffer slicing |
-| **Parsing Latency** | **Sub-microsecond** | Zero-copy header extraction & state machine |
-| **Memory Footprint** | **$< 16\text{MB}$ RSS** | Static compilation & minimal async runtime overhead |
-| **Protocol Path** | **UDP / CoAP $\rightarrow$ gRPC** | Asynchronous lock-free ring channel dispatch |
+* **High-Performance Systems:** Deterministic, low-latency infrastructure built with asynchronous **Rust** (`Tokio`, `Bytes`, `Tonic`).
+* **Doctoral Research:** Zero-overhead edge-to-cloud protocol translation (`CoAP/CBOR` $\rightarrow$ `gRPC/Protobuf`) under extreme memory bounds ($<16\text{MB}$).
+* **B2B Technical Advisory:** System refactoring, $p99.9$ tail-latency optimization, and fractional infrastructure leadership via **Teknally Consulting Group**.
 
 ---
 
-### Navigation & Resources
+### Featured Project: ZeroGate
 
-* Explore doctoral research questions and problem formulations on the **[Research](/research)** page.
-* View architecture diagrams, `Criterion.rs` benchmarks, and `DESIGN.md` specs on the **[Projects](/projects)** page.
-* Read technical deep dives on Rust memory safety, lock-free queues, and low-level I/O on the **[Blog](/blog)**.
-* Retain **[Teknally Consulting Group](/consulting)** for fractional technical advisory and infrastructure refactoring.
+A zero-copy asynchronous protocol translation gateway designed for sub-microsecond parsing latency, zero hot-path heap allocations, and lock-free thread orchestration.
+
+&rarr; [View Technical Architecture & Benchmarks](/projects)
+
+---
+
+### Navigation
+
+* **[Research](/research)** &mdash; Thesis problem statements, formal models & preprints.
+* **[Projects](/projects)** &mdash; Systems artifacts, `DESIGN.md` specs & Criterion benchmarks.
+* **[Consulting](/consulting)** &mdash; B2B advisory services, retainer models & contact.
+* **[Blog](/blog)** &mdash; Technical deep dives on Rust memory safety, lock-free queues & Linux I/O.
+* **[About & CV](/about)** &mdash; Background, academic profile & downloadable CV.
